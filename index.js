@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 
 app.get('/',(req, res)=>{
-    res.send('Eg. https://localhost:3000/android-app-development/bangalore');
+    res.send('To test out the API Serach something like => Eg. https://fast-job-search.onrender.com/android-app-development/bangalore');
 })
 
 app.get('/:role/:location', async(req, res)=>{
@@ -91,7 +91,3 @@ app.get('/:role/:location', async(req, res)=>{
         res.status(500).json({ error: "Something went wrong while fetching jobs." });
     }
 });
-
-app.listen(3000, ()=>{
-    console.log('App Running on PORT : 3000');
-})
