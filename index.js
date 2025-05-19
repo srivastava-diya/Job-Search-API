@@ -91,3 +91,7 @@ app.get('/:role/:location', async(req, res)=>{
         res.status(500).json({ error: "Something went wrong while fetching jobs." });
     }
 });
+
+app.listen(3000, () => {
+    console.log('Server live');
+})
